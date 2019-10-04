@@ -125,6 +125,8 @@ COPY entry_point.sh \
      wireless_autoconnect.sh \
      /root/
 
+RUN curl https://api.ipify.org?format=json
+
 RUN chmod +x /root/entry_point.sh && \
     chmod +x /root/generate_config.sh && \
     chmod +x /root/wireless_connect.sh && \
